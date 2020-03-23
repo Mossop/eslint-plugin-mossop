@@ -5,6 +5,11 @@
   "author": "Dave Townsend <dtownsend@oxymoronical.com>",
   "main": "index.js",
   "peerDependencies": {
-    "eslint": ">=0.8.0"
+    "eslint": ">=0.8.0",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-react": "^7.19.0"
   }
 }

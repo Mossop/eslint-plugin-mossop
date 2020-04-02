@@ -41,7 +41,7 @@ module.exports = {
         "no-new-wrappers": "error",
         "no-throw-literal": "error",
         "semi": "off",
-        "comma-dangle": ["warn", "only-multiline"],
+        "comma-dangle": ["warn", "always-multiline"],
         "import/order": ["warn", {
           "groups": [
             "builtin",

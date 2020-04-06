@@ -16,11 +16,15 @@ module.exports = {
         "plugin:import/typescript",
       ],
       "rules": {
-        "array-bracket-newline": "warn",
-        "array-bracket-spacing": "warn",
-        "array-element-newline": ["error", {
-          "multiline": true
+        "no-fallthrough": "warn",
+        "consistent-return": "warn",
+        "no-constructor-return": "error",
+        "array-callback-return": "error",
+        "array-bracket-newline": ["warn", {
+          "multiline": true,
         }],
+        "array-bracket-spacing": "warn",
+        "array-element-newline": ["warn", "consistent"],
         "max-len": ["warn", 100],
         "linebreak-style": "warn",
         "key-spacing": "warn",
@@ -69,10 +73,11 @@ module.exports = {
           }
         }],
         "object-curly-newline": ["warn", {
-          "consistent": true
+          "multiline": true,
+          "consistent": true,
         }],
         "object-curly-spacing": ["warn", "always"],
-        "object-property-newline": ["error", {
+        "object-property-newline": ["warn", {
           "allowAllPropertiesOnSameLine": true
         }],
         "space-unary-ops": ["warn", {
@@ -81,13 +86,17 @@ module.exports = {
         }],
         "switch-colon-spacing": "warn",
         "space-in-parens": "warn",
-        "spaced-comment": ["error", "always", {
+        "spaced-comment": ["warn", "always", {
           "block": {
             "balanced": true
           },
         }],
         "space-infix-ops": "warn",
-        "@typescript-eslint/space-before-function-paren": ["warn", "never"],
+        "@typescript-eslint/space-before-function-paren": ["warn", {
+          "named": "never",
+          "anonymous": "never",
+          "asyncArrow": "always",
+        }],
         "space-before-blocks": "warn",
         "padded-blocks": ["warn", "never"],
         "semi-spacing": "warn",
@@ -95,12 +104,14 @@ module.exports = {
         "no-trailing-spaces": "warn",
         "no-nested-ternary": "warn",
         "import/first": "warn",
-        "import/named": "off",
         "import/extensions": ["warn", "never"],
         "import/newline-after-import": "warn",
         "@typescript-eslint/quotes": "warn",
         "@typescript-eslint/brace-style": "warn",
-        "@typescript-eslint/indent": ["warn", 2],
+        "@typescript-eslint/indent": ["warn", 2, {
+          "ignoredNodes": ['TSTypeParameterInstantiation'],
+          "SwitchCase": 1,
+        }],
         "@typescript-eslint/semi": "error",
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/comma-spacing": "warn",
@@ -113,7 +124,6 @@ module.exports = {
         "generator-star-spacing": "warn",
         "arrow-spacing": "warn",
         "arrow-parens": ["warn", "as-needed"],
-        "prefer-destructuring": "warn",
         "prefer-spread": "warn",
         "prefer-rest-params": "warn",
         "rest-spread-spacing": "warn",
@@ -131,6 +141,9 @@ module.exports = {
         // enable these rules specifically for TypeScript files
         "files": ["*.ts", "*.tsx"],
         "rules": {
+          "import/named": "off",
+          "import/default": "off",
+          "consistent-return": "off",
           "@typescript-eslint/ban-ts-ignore": "off",
           "@typescript-eslint/no-empty-interface": "off",
           "@typescript-eslint/no-inferrable-types": ["warn", {
@@ -139,11 +152,12 @@ module.exports = {
           "@typescript-eslint/typedef": ["warn", {
             arrayDestructuring: false,
             arrowParameter: true,
-            memberVariableDeclaration: false,
+            memberVariableDeclaration: true,
             objectDestructuring: false,
             parameter: true,
             propertyDeclaration: true,
             variableDeclaration: false,
+            variableDeclarationIgnoreFunction: true,
           }],
           "@typescript-eslint/no-unnecessary-type-arguments": "warn",
           "@typescript-eslint/explicit-member-accessibility": "warn",
@@ -177,7 +191,54 @@ module.exports = {
         "plugin:react/recommended",
       ],
       "rules": {
+        "react/button-has-type": "warn",
+        "react/jsx-boolean-value": ["warn", "always"],
+        "react/jsx-child-element-spacing": "warn",
+        "react/jsx-closing-bracket-location": ["warn", "line-aligned"],
+        "react/jsx-curly-brace-presence": ["warn", "never"],
+        "react/jsx-curly-newline": ["warn", {
+          "multiline": "require",
+          "singleline": "consistent",
+        }],
+        "react/jsx-curly-spacing": "warn",
+        "react/jsx-equals-spacing": "warn",
+        "react/jsx-filename-extension": ["warn", {
+          "extensions": [".tsx", ".jsx"],
+        }],
+        "react/jsx-first-prop-new-line": ["warn", "multiline"],
+        "react/jsx-fragments": ["warn", "element"],
+        "react/jsx-indent": ["warn", 2],
+        "react/jsx-indent-props": ["warn", "first"],
+        "react/jsx-max-props-per-line": ["warn", {
+          "maximum": 1,
+          "when": "multiline",
+        }],
+        "react/jsx-no-bind": "warn",
+        "react/jsx-no-useless-fragment": "warn",
+        "react/jsx-pascal-case": "warn",
+        "react/jsx-tag-spacing": ["warn", {
+          "closingSlash": "never",
+          "beforeSelfClosing": "never",
+          "afterOpening": "never",
+          "beforeClosing": "never"
+        }],
+        "react/no-access-state-in-setstate": "warn",
+        "react/no-array-index-key": "warn",
+        "react/no-danger": "warn",
+        "react/no-did-mount-set-state": "warn",
+        "react/no-did-update-set-state": "warn",
+        "react/no-redundant-should-component-update": "warn",
+        "react/no-this-in-sfc": "error",
+        "react/no-typos": "error",
+        "react/no-unsafe": "warn",
+        "react/no-unused-state": "warn",
+        "react/no-will-update-set-state": "error",
+        "react/prefer-es6-class": "error",
         "react/prop-types": "off",
+        "react/require-optimization": "warn",
+        "react/self-closing-comp": "warn",
+        "react/style-prop-object": "error",
+        "react/void-dom-elements-no-children": "error",
       },
     },
   },

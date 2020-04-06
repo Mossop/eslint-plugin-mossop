@@ -16,9 +16,7 @@ module.exports = {
         "plugin:import/typescript",
       ],
       "rules": {
-        "array-bracket-newline": ["warn", {
-          "multiline": true,
-        }],
+        "array-bracket-newline": ["warn", "consistent"],
         "array-bracket-spacing": "warn",
         "array-callback-return": "error",
         "array-element-newline": ["warn", "consistent"],

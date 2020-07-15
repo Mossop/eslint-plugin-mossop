@@ -141,7 +141,10 @@ module.exports = {
         "@typescript-eslint/no-unsafe-member-access": "off",
         "@typescript-eslint/no-unused-expressions": "warn",
         "@typescript-eslint/no-unused-vars": ["warn", {
+          "args": "after-used",
           "argsIgnorePattern": "^_",
+          "ignoreRestSiblings": true,
+          "caughtErrors": "none",
         }],
         "@typescript-eslint/no-use-before-define": "off",
         "no-whitespace-before-property": "warn",
@@ -164,6 +167,7 @@ module.exports = {
         "quotes": "off",
         "@typescript-eslint/quotes": "warn",
         "require-atomic-updates": "off",
+        "@typescript-eslint/require-await": "off",
         "rest-spread-spacing": "warn",
         "@typescript-eslint/restrict-template-expressions": "off",
         "semi-spacing": "warn",

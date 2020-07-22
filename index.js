@@ -72,13 +72,20 @@ module.exports = {
           {
             selector: "default",
             format: ["camelCase"],
-            leadingUnderscore: "allow",
+            leadingUnderscore: "forbid",
+            trailingUnderscore: "forbid",
+          },
+          {
+            selector: "variable",
+            modifiers: ["const"],
+            format: ["PascalCase", "UPPER_CASE"],
+            leadingUnderscore: "forbid",
             trailingUnderscore: "forbid",
           },
           {
             selector: "variableLike",
-            format: ["camelCase", "PascalCase", "UPPER_CASE"],
-            leadingUnderscore: "allow",
+            format: ["camelCase", "PascalCase"],
+            leadingUnderscore: "forbid",
             trailingUnderscore: "forbid",
           },
           {
@@ -103,7 +110,14 @@ module.exports = {
           },
           {
             selector: "memberLike",
-            format: ["camelCase", "PascalCase"],
+            modifiers: ["protected"],
+            format: ["camelCase"],
+            leadingUnderscore: "allow",
+            trailingUnderscore: "forbid",
+          },
+          {
+            selector: "memberLike",
+            format: ["camelCase"],
             leadingUnderscore: "forbid",
             trailingUnderscore: "forbid",
           },

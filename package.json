@@ -1,13 +1,13 @@
 {
   "name": "eslint-plugin-mossop",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "My personal eslint configurations.",
   "author": "Dave Townsend <dtownsend@oxymoronical.com>",
   "main": "index.js",
   "peerDependencies": {
     "eslint": ">=0.8.0",
-    "@typescript-eslint/eslint-plugin": "^3.1.0",
-    "@typescript-eslint/parser": "^3.1.0",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
     "eslint-import-resolver-ts": "^0.4.2",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-react": "^7.19.0"

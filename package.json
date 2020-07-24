@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-mossop",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "My personal eslint configurations.",
   "author": "Dave Townsend <dtownsend@oxymoronical.com>",
   "main": "index.js",

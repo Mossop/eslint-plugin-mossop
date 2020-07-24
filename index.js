@@ -78,7 +78,7 @@ module.exports = {
           {
             selector: "variable",
             modifiers: ["const"],
-            format: ["PascalCase", "UPPER_CASE"],
+            format: ["camelCase", "PascalCase", "UPPER_CASE"],
             leadingUnderscore: "forbid",
             trailingUnderscore: "forbid",
           },
@@ -86,6 +86,12 @@ module.exports = {
             selector: "variableLike",
             format: ["camelCase", "PascalCase"],
             leadingUnderscore: "forbid",
+            trailingUnderscore: "forbid",
+          },
+          {
+            selector: "parameter",
+            format: ["camelCase"],
+            leadingUnderscore: "allow",
             trailingUnderscore: "forbid",
           },
           {

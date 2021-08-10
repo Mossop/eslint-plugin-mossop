@@ -1,15 +1,17 @@
 {
   "name": "eslint-plugin-mossop",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "My personal eslint configurations.",
   "author": "Dave Townsend <dtownsend@oxymoronical.com>",
   "main": "index.js",
   "peerDependencies": {
-    "eslint": ">=0.8.0",
-    "@typescript-eslint/eslint-plugin": "^4.10.0",
-    "@typescript-eslint/parser": "^4.10.0",
-    "eslint-import-resolver-ts": "^0.4.2",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-react": "^7.21.5"
+    "eslint": ">=7.32.0",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }
